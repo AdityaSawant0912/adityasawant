@@ -17,7 +17,7 @@
   --spacing: 1.5em;
   --spacing-s: calc(0.5 * var(--spacing));
   --spacing-m: var(--spacing);
-  --spacing-l: calc(1.5 * var(--spacing));
+  --spacing-l: calc(1 * var(--spacing));
   --spacing-xl: calc(2.5 * var(--spacing));
   --spacing-xxl: calc(5 * var(--spacing));
   --spacing-col: calc(6 * var(--spacing));
@@ -94,7 +94,7 @@ body>header h1 {
 body>header img {
     display: block;
     border-radius: 100%;
-    height: calc(3 * var(--spacing));
+    height: 150px;
     width: auto;
 }
 
