@@ -229,6 +229,26 @@ figure img {
 }
 
 
+.heading {
+    display: block;
+}
+.heading > div {
+    margin-top: 20px;
+    /* margin-left: 20px; */
+}
+
+@media (min-width: 610px) {
+    .heading {
+        display: flex;
+        align-items: center;
+    }
+    .heading > div {
+        margin-top: 0px;
+        margin-left: 20px;
+    }
+}
+
+
 body>header, article>header,
 h1, h2, h3, time,
 p, blockquote, ol, ul, details, pre.code, figcaption,

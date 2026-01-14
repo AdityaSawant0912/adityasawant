@@ -1,8 +1,14 @@
-import React from 'react'
+import ExpandCollapse from "./ExpandCollapse"
 
-function Detail({children}) {
+function Detail({ children, className:className = "" }) {
   return (
-    <p className="text-def mx-auto max-w-[608px] mt-[18px] leading-[27px] font-[400] text-[18px]">{children}</p>
+    <div className={`mx-auto mt-[18px] my-4 ${className}`}>
+      <ExpandCollapse line={12}>
+        <p className="text-def max-w-[608px]  leading-[27px] font-[400] text-[18px] my-0">
+          {children}
+        </p>
+      </ExpandCollapse>
+    </div>
   )
 }
 

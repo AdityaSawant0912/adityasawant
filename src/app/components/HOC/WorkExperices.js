@@ -10,20 +10,18 @@ function WorkExperices() {
             <Heading>Work Experience</Heading>
             <Item
                 date={'Sept 2024 - June 2025'}
-                title={'Associate Software Development Engineer at CarTrade Tech'}
+                title={'Software Development Engineer at CarTrade Tech'}
                 location={'Vashi, Navi Mumbai'}
                 titleLink={'https://www.cartradetech.com/'}
             >
                 <>
                     <Detail>
                         As a dedicated Frontend Developer, I bring a comprehensive skill set encompassing frontend technologies like JavaScript, ReactJS, Redux, HTML/CSS, and backend solutions using .NET, Node.js, and MySQL. My focus lies in building robust, high-performance web applications. I have successfully developed scalable, reusable component libraries that streamline development cycles. A key achievement includes optimizing the extensive Oxygen Design System, comprising over 68 UI components, to significantly improve accessibility and performance for a user base numbering in the millions.
-                    </Detail>
-
-                    <Detail>
+                        <br/>
+                        <br/>
                         My technical contributions extend to enhancing website performance through strategic DOM optimizations, implementing lazy loading, and refining image rendering processes. I am proactive in improving development efficiency by automating workflows, having created scripts for tasks such as unused CSS detection, import management, and build optimizations. Furthermore, I possess strong experience in implementing critical business campaigns with vanilla JavaScript, ensuring cross-browser compatibility and peak performance.
-                    </Detail>
-
-                    <Detail>
+                        <br/>
+                        <br/>
                         I have led the development of diverse features, from dynamic UI elements to responsive micro-sites and complex product workflows. Notably, I designed and implemented a modular Template Engine to facilitate efficient ad generation. Collaboration is central to my approach; I work closely with design, product, and engineering counterparts to ensure our applications are not only high-performing and scalable but also maintainable long-term, emphasizing strong system design principles.
                     </Detail>
                 </>

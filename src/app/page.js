@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Contacts from "./components/HOC/Contacts";
 import About from "./components/HOC/About";
+import Education from "./components/HOC/Education";
 import FeaturedTalks from "./components/HOC/FeaturedTalks";
 import Projects from "./components/HOC/Projects";
 import WorkExperices from "./components/HOC/WorkExperices";
@@ -43,25 +44,30 @@ export default function Home() {
         <>
 
             <header className="mx-auto mb-[80px] flex text-[#797673] max-w-[608px] justify-between">
-                <div className="block leading-[24px]  box-border font-[500]">
-                    <Image src={'/headshot.jpg'} alt="Aditya Sawant Headshot" width={400} height={400} quality={90}/> 
-                    <Link href={'/'}><h1 className="text-highlight">Aditya Sawant</h1></Link>
-                    Associate Software Development Engineer @ <Link href={'https://www.cartradetech.com/'} target="_blank" className="decoration-[#797673] underline">CarTrade Tech</Link>
-                    <br />
-                    Computer Engineer | Web Developer
-                    <br />
-                    Thane, Maharashtra
+                <div className="leading-[24px]  box-border font-[500] heading ">
+                    <Image src={'/headshot.jpg'} alt="Aditya Sawant Headshot" width={400} height={400} quality={90} />
+                    <div className="">
+                        <h1 className="text-highlight">Aditya Sawant</h1>
+                        MS CS @ <Link href={'https://www.buffalo.edu/'} target="_blank" className="decoration-[#797673] underline">University at Buffalo</Link>
+                        <br />
+                        Ex - Software Development Engineer @ <Link href={'https://www.cartradetech.com/'} target="_blank" className="decoration-[#797673] underline">CarTrade Tech</Link>
+                        <br />
+                        Computer Engineer | Web Developer
+                        <br />
+                        Buffalo, New York
+                    </div>
                 </div>
             </header>
             <main>
                 <About />
                 <Contacts />
+                <Education />
                 <WorkExperices />
                 <Projects />
                 <FeaturedTalks />
             </main >
             <Footer />
-            
+
 
         </>
     );
