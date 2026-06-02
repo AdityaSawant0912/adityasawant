@@ -12,7 +12,7 @@ function ExpandCollapse({ children, line, isOpen: initialIsOpen = false }) {
   useEffect(() => {
     if (contentRef.current) {
       const lineHeight = parseInt(window.getComputedStyle(contentRef.current).lineHeight)
-      const maxHeight = lineHeight * line * 1.23
+      const maxHeight = lineHeight * line * 1
       const actualHeight = contentRef.current.scrollHeight
 
       setOpenHeight(actualHeight + 26)
@@ -48,7 +48,7 @@ function ExpandCollapse({ children, line, isOpen: initialIsOpen = false }) {
         <button
           ref={buttonRef}
           onClick={() => handleToggle()}
-          className={`${!isOpen ? "absolute" : "float-right"} cursor-pointer border-none text-highlight p-0 underline text-right pl-12 pr-1 items-center  right-0 bottom-0 pb-[2px]`}
+          className={`${!isOpen ? "absolute" : "float-right"} cursor-pointer border-none text-highlight p-0 text-right pl-12 pr-1 items-center  right-0 bottom-0 pb-[0px] text-lg m-0`}
           style={{
             backgroundImage: "linear-gradient(90deg, rgba(36, 33, 32, 0) 0px, rgba(36, 33, 32, 0.93) 25%, rgb(36, 33, 32))"
           }}

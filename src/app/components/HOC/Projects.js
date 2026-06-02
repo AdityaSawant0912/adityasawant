@@ -37,9 +37,7 @@ function Projects() {
                 titleLink={'https://adityasawant0912.github.io/P5JS-MiniProjects/'}
                 location={'Personal Project'}
             >
-                <Detail>
                     I have embarked on numerous mini projects utilizing P5.js, encompassing a diverse array of visualizations and applications. These include creations such as <em>Ray Tracing 2D & 3D</em> and <em>Fractal Tree Animations</em>, as well as game remakes including <em>Flappy Bird</em>, <em>Game of Life</em>, <em>Minesweeper</em>, and <em>Snake</em>. Additionally, I&apos;ve delved into engineering concepts through projects such as implementing the <em>A* algorithm</em>, solving the <em>8 Queens problem</em>, exploring <em>K-means clustering</em>, and simulating <em>Epsilon NFA</em>. These projects not only bolstered my understanding of programming and visualization techniques but also provided practical insights into engineering principles covered in my syllabus.
-                </Detail>
             </Item>
             <Item
                 date={'2018 - 2020'}

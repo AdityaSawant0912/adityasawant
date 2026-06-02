@@ -14,13 +14,11 @@ const Education = () => {
                 location={'Buffalo, New York'}
                 titleLink={'https://www.buffalo.edu/'}
             >
-                <Detail>
                     <strong> Relevant Courses</strong>:
                     Database System,
                     Operating System,
                     Analysis of Algorithms,
-                    Data Intensive Computing.
-                </Detail>
+                    Software Security.
 
             </Item>
             <Item

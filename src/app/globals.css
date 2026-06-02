@@ -156,7 +156,7 @@ h3 a {
     color: var(--color-highlight);
 }
 
-p, ol, ul {
+button, p, ol, ul {
     font-family: var(--font-serif);
     font-weight: normal;
     margin: 1em 0;
