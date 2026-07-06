@@ -24,12 +24,15 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://adityasawant.vercel.app"),
+  metadataBase: new URL("https://adityasawant.dev"),
   title: "Aditya Sawant — Full-stack Engineer",
   description:
     "Aditya Sawant — full-stack software engineer. Design systems to production APIs, with a creative-coding streak.",
+  alternates: {
+    canonical: "https://adityasawant.dev",
+  },
   openGraph: {
-    url: "https://adityasawant.vercel.app",
+    url: "https://adityasawant.dev",
     title: "Aditya Sawant — Full-stack Engineer",
     description: "Design systems to production APIs, with a creative-coding streak.",
     images: [{ url: "/logo_square.webp", width: 400, height: 400, alt: "Aditya Sawant" }],

@@ -57,7 +57,7 @@ export default function Hero() {
         </div>
         <div className="status">
           <span className="dot" aria-hidden="true" />
-          <span className="mono">Open to full-time SDE roles · {profile.location}</span>
+          <span className="mono">{profile.status} · {profile.location}</span>
         </div>
       </motion.div>
 

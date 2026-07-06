@@ -8,6 +8,7 @@ export const profile = {
     { label: "Ex — SDE", org: "CarTrade Tech", href: "https://www.cartradetech.com/" },
   ],
   tagline: "Full-stack engineer. Design systems to production APIs.",
+  status: "Open to full-time SDE roles from Sep 2026",
   location: "Buffalo, New York",
   headshot: "/headshot.jpg",
   resume: "https://resume.adityasawant.dev/",
@@ -27,6 +28,8 @@ export const work = [
     body: [
       "Integrating 6 social platforms (Instagram, YouTube, TikTok, LinkedIn, Snapchat, X) via OAuth with automatic token refresh and credential rotation, syncing 500+ creator records daily with 0 data loss.",
       "Architecting separate dev/prod environments on Neon with automated S3 backups and branch protection — serving 150+ creators with zero risk of dev changes affecting live users.",
+      "Built a video-level analytics pipeline using YouTube Data API v3 + Analytics API v2, modelled with a Drizzle ORM schema. Debugged a Neon HTTP driver vs. standard Postgres discrepancy in .returning() behavior that silently dropped insert results.",
+      "Worked around LinkedIn OAuth's r_dma_portability_3rd_party scope being EEA-only — restructured the token exchange flow so non-EEA users don't hit a silent auth failure.",
     ],
   },
   {
@@ -36,8 +39,8 @@ export const work = [
     titleLink: "https://www.safetyknights.com/",
     tags: ["Express", "Node.js", "Angular", "MongoDB", "GridFS", "node-cron"],
     body: [
-      "Architected and shipped a production EHS job board in beta with 4,000 users: Express/Node.js API (75+ endpoints, AES-256 encryption), Angular v17 SSR consumer app, and standalone admin console across 3 independently deployable codebases.",
-      "Designed the data layer with 4 Mongoose models using compound, geospatial, and full-text indexes. Built multi-axis job search and automated hourly listing expiration via node-cron.",
+      "Shipped a production EHS job board with 4,000 beta users: Express/Node.js API (75+ endpoints, AES-256 encryption), Angular v17 SSR frontend, and a standalone admin console — three independently deployable codebases.",
+      "Modelled the data layer with 4 Mongoose schemas — compound, geospatial, and full-text indexes. Multi-axis job search and hourly listing expiration via node-cron.",
       "Built full candidate pipeline — GridFS document storage, 5-stage status tracking, 3 automated email flows — with admin filtering by location, experience, and certification.",
     ],
   },
@@ -49,7 +52,7 @@ export const work = [
     tags: ["React", "Redux", "JavaScript", ".NET", "MySQL"],
     body: [
       "Shipped a 68-component Oxygen Design System — improved accessibility and performance for a user base in the millions.",
-      "Built React/Redux frontends against .NET and Node.js backends across multiple product verticals; optimized page performance via DOM restructuring, lazy loading, and image-rendering improvements.",
+      "Built React/Redux frontends across multiple product verticals; cut page load times via DOM restructuring, lazy loading, and image-rendering improvements.",
       "Built developer tooling (unused-CSS detection, import management, build optimization) and a modular Template Engine for ad generation; led responsive micro-site and dynamic UI development.",
     ],
   },
@@ -84,12 +87,22 @@ export const work = [
 
 export const projects = [
   {
-    date: "2023 — Present",
+    date: "2026",
+    title: "bro-cli",
+    titleLink: "https://github.com/AdityaSawant0912/bro-cli",
+    location: "Personal — systems tooling",
+    tags: ["Rust", "TOML", "clap", "🚧 In Progress"],
+    body: [
+      "A CLI tool built around an emit-and-eval pattern for shell-stateful commands — the shell emits a command string, the CLI evaluates and reacts to it, rather than trying to mutate shell state directly. Flat-file TOML backend; subcommands via clap.",
+    ],
+  },
+  {
+    date: "2023 — 2024",
     title: "S3A-Net: Spatial-Spectral Self-Attention Network for Hyperspectral Image Classification",
     location: "Final-year major project",
     tags: ["Python", "PyTorch", "Few-Shot Learning", "Remote Sensing"],
     body: [
-      "Implemented and co-researched S3A-Net, a self-attention network for few-shot hyperspectral image classification, under Dr. Manimala Mahato and Prof. Biplab Banerjee. Built the architecture to capture joint spatial and spectral features and ran classification experiments — state-of-the-art accuracy and robustness with limited labeled data.",
+      "Implemented and co-researched S3A-Net, a self-attention network for few-shot hyperspectral image classification, under Dr. Manimala Mahato and Prof. Biplab Banerjee. Built the architecture to capture joint spatial and spectral features and ran classification experiments showing strong accuracy with limited labeled data.",
     ],
   },
   {
