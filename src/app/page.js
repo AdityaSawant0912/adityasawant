@@ -1,120 +1,87 @@
-import Link from "next/link";
-import Contacts from "./components/HOC/Contacts";
-import About from "./components/HOC/About";
-import Education from "./components/HOC/Education";
-import FeaturedTalks from "./components/HOC/FeaturedTalks";
-import Projects from "./components/HOC/Projects";
-import WorkExperices from "./components/HOC/WorkExperices";
-import Footer from "./components/HOC/Footer";
-import Image from "next/image";
-
-export async function generateMetadata(props, parent) {
-  return {
-    cannonical: "https://adityasawant.vercel.app",
-    robotsProps: {
-      nosnippet: false,
-      notranslate: true,
-      noimageindex: true,
-      noarchive: true,
-      maxSnippet: -1,
-      maxImagePreview: "none",
-      maxVideoPreview: -1,
-    },
-    openGraph: {
-      url: "https://adityasawant.vercel.app",
-      title: "Aditya Sawant",
-      description: "Aditya Sawant's Portfolio",
-      images: [
-        {
-          url: "https://adityasawant.vercel.app/logo-circle.webp",
-          width: 2160,
-          height: 2160,
-          alt: "Logo",
-        },
-        {
-          url: "https://adityasawant.vercel.app/logo-square.webp",
-          width: 400,
-          height: 400,
-          alt: "Logo",
-        },
-        {
-          url: "https://adityasawant.vercel.app/logo-circle.png",
-          width: 2160,
-          height: 2160,
-          alt: "Logo",
-        },
-        {
-          url: "https://adityasawant.vercel.app/logo-square.png",
-          width: 400,
-          height: 400,
-          alt: "Logo",
-        },
-      ],
-    },
-    twitter: {
-      handle: "@adzzhere",
-      site: "@adzzhere",
-      cardType: "summary_large_image",
-    },
-  };
-}
+import GenerativeCanvas from "./components/GenerativeCanvas";
+import Orbs from "./components/Orbs";
+import Nav from "./components/Nav";
+import Hero from "./components/Hero";
+import Section from "./components/Section";
+import Entry from "./components/Entry";
+import Reveal from "./components/Reveal";
+import { about, work, projects, education, talks, contacts } from "./data";
 
 export default function Home() {
+  const year = new Date().getFullYear();
+
   return (
     <>
-      <header className="mx-auto mb-[80px] flex text-[#797673] max-w-[608px] justify-between">
-        <div className="leading-[24px]  box-border font-[500] heading ">
-          <Image
-            src={"/headshot.jpg"}
-            alt="Aditya Sawant Headshot"
-            width={400}
-            height={400}
-            quality={90}
-          />
-          <div className="">
-            <h1 className="text-highlight">Aditya Sawant</h1>
-            MS CS @{" "}
-            <Link
-              href={"https://www.buffalo.edu/"}
-              target="_blank"
-              className="decoration-[#797673] underline"
-            >
-              University at Buffalo
-            </Link>
-            <br />
-            Software Development Intern @{" "}
-            <Link
-              href={"https://www.channelcore.io/"}
-              target="_blank"
-              className="decoration-[#797673] underline"
-            >
-              Channel Core
-            </Link>
-            <br />
-            Ex - Software Development Engineer @{" "}
-            <Link
-              href={"https://www.cartradetech.com/"}
-              target="_blank"
-              className="decoration-[#797673] underline"
-            >
-              CarTrade Tech
-            </Link>
-            <br />
-            <i>Software Engineer. Problem Solver. Perpetually curious.</i>
-            <br />
-            Buffalo, New York
-          </div>
-        </div>
-      </header>
-      <main>
-        <About />
-        <Contacts />
-        <Education />
-        <WorkExperices />
-        <Projects />
-        <FeaturedTalks />
-      </main>
-      <Footer />
+      <GenerativeCanvas />
+      <Orbs />
+      <div className="bg-veil" aria-hidden="true" />
+      <Nav />
+
+      <div className="shell">
+        <Hero />
+
+        <main>
+          <Section id="about" index="01" title="About">
+            <Reveal>
+              <p className="about-lead">{about}</p>
+            </Reveal>
+          </Section>
+
+          <Section id="work" index="02" title="Work Experience">
+            {work.map((item, i) => (
+              <Entry key={item.title + item.date} item={item} delay={Math.min(i, 3) * 0.05} />
+            ))}
+          </Section>
+
+          <Section id="projects" index="03" title="Projects">
+            {projects.map((item, i) => (
+              <Entry key={item.title} item={item} delay={Math.min(i, 3) * 0.05} />
+            ))}
+          </Section>
+
+          <Section id="education" index="04" title="Education">
+            {education.map((item) => (
+              <Entry key={item.title} item={item} />
+            ))}
+          </Section>
+
+          <Section id="talks" index="05" title="Featured Talks">
+            {talks.map((item) => (
+              <Entry key={item.title} item={item} />
+            ))}
+          </Section>
+
+          <Section id="contact" index="06" title="Contact">
+            <div className="contact-list">
+              {contacts.map((c, i) => {
+                const external = !c.href.startsWith("mailto:");
+                return (
+                  <Reveal
+                    as="a"
+                    key={c.label}
+                    className="contact-row"
+                    href={c.href}
+                    delay={i * 0.05}
+                    {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+                  >
+                    <span className="clabel">{c.label}</span>
+                    <span className="cval">
+                      {c.value}
+                      <span className="arrow" aria-hidden="true">
+                        ↗
+                      </span>
+                    </span>
+                  </Reveal>
+                );
+              })}
+            </div>
+          </Section>
+        </main>
+
+        <footer className="foot">
+          © {year} Aditya Sawant · built with 💖
+        </footer>
+      </div>
     </>
   );
 }

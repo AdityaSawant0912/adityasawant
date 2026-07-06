@@ -1,11 +1,13 @@
-import React from 'react'
+import Reveal from "./Reveal";
 
-function Section({children}) {
+export default function Section({ id, index, title, children }) {
   return (
-    <section className="mb-[60px] font-blanco font-[500]">
-        {children}
+    <section id={id} className="section">
+      <Reveal className="section-head">
+        <span className="idx">{index}</span>
+        <h2>{title}</h2>
+      </Reveal>
+      {children}
     </section>
-  )
+  );
 }
-
-export default Section
