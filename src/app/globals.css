@@ -263,6 +263,11 @@ a {
   font-family: var(--font-body), serif;
   font-style: italic;
 }
+.entry .ecompany {
+  color: var(--ink);
+  font-weight: 600;
+  font-style: normal;
+}
 
 .entry .ebody {
   color: var(--muted);
@@ -475,7 +480,7 @@ a {
   font-size: clamp(1.15rem, 3.6vw, 1.55rem);
   color: var(--ink);
   margin: 1.15rem 0 0;
-  max-width: 24ch;
+  max-width: 22ch;
   line-height: 1.35;
 }
 .hero-roles {

@@ -1,7 +1,7 @@
 import Reveal from "./Reveal";
 
 export default function Entry({ item, delay = 0 }) {
-  const { date, title, titleLink, location, tags = [], body = [] } = item;
+  const { date, title, titleLink, location, company, tags = [], body = [] } = item;
   return (
     <Reveal className="entry" delay={delay}>
       {date && <span className="date mono">{date}</span>}
@@ -14,7 +14,13 @@ export default function Entry({ item, delay = 0 }) {
           title
         )}
       </h3>
-      {location && <p className="eloc">{location}</p>}
+      {(company || location) && (
+        <p className="eloc">
+          {company && <span className="ecompany">{company}</span>}
+          {company && location && " · "}
+          {location}
+        </p>
+      )}
       {tags.length > 0 && (
         <div className="etags">
           {tags.map((t) => (

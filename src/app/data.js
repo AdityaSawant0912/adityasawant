@@ -7,24 +7,25 @@ export const profile = {
     { label: "Software Development Intern", org: "Channel Core", href: "https://www.channelcore.io/" },
     { label: "Ex — SDE", org: "CarTrade Tech", href: "https://www.cartradetech.com/" },
   ],
-  tagline: "Full-stack engineer. Design systems to production APIs.",
-  status: "Open to full-time SDE roles from Sep 2026",
+  tagline: "Full-stack engineer. Production-minded, systems-first.",
+  status: "Open to full-time SDE roles",
   location: "Buffalo, New York",
   headshot: "/headshot.jpg",
-  resume: "https://resume.adityasawant.dev/",
+  resume: "https://resume.adityasawant.dev/pdf",
   email: "arsawant09@gmail.com",
 };
 
 export const about =
-  "I build production systems — a 68-component design system at CarTrade reaching millions of users, a full-stack EHS job board in beta with 4,000 users, and OAuth pipelines syncing 500+ creator records daily. I've also taught web development and creative coding to 100+ junior students at SAKEC. Currently pursuing MS CS at the University at Buffalo (GPA 3.83).";
+  "I like taking systems from whiteboard to production. That's meant building a 68-component design system used by 80M+ people at CarTrade, an EHS job board now in beta with 4,000+ users, and analytics pipelines at ChannelCore syncing hundreds of creator records a day. I'm currently finishing my MS in Computer Science at the University at Buffalo, and I still find time to teach and build side projects like bro-cli, a Rust CLI tool.";
 
 export const work = [
   {
     date: "May 2026 — Aug 2026",
     title: "Software Development Intern",
+    company: "Channel Core",
     location: "Irvine, California",
     titleLink: "https://www.channelcore.io/",
-    tags: ["OAuth", "Node.js", "PostgreSQL", "Neon", "AWS S3"],
+    tags: ["OAuth", "Node.js", "PostgreSQL", "Neon", "AWS S3", "CI/CD"],
     body: [
       "Integrating 6 social platforms (Instagram, YouTube, TikTok, LinkedIn, Snapchat, X) via OAuth with automatic token refresh and credential rotation, syncing 500+ creator records daily with 0 data loss.",
       "Architecting separate dev/prod environments on Neon with automated S3 backups and branch protection — serving 150+ creators with zero risk of dev changes affecting live users.",
@@ -35,9 +36,10 @@ export const work = [
   {
     date: "Jan 2026 — May 2026",
     title: "Software Development Intern",
+    company: "Safety Knights",
     location: "Buffalo, New York",
     titleLink: "https://www.safetyknights.com/",
-    tags: ["Express", "Node.js", "Angular", "MongoDB", "GridFS", "node-cron"],
+    tags: ["Express", "Node.js", "Angular", "MongoDB", "GridFS", "node-cron", "CI/CD"],
     body: [
       "Shipped a production EHS job board with 4,000 beta users: Express/Node.js API (75+ endpoints, AES-256 encryption), Angular v17 SSR frontend, and a standalone admin console — three independently deployable codebases.",
       "Modelled the data layer with 4 Mongoose schemas — compound, geospatial, and full-text indexes. Multi-axis job search and hourly listing expiration via node-cron.",
@@ -47,9 +49,10 @@ export const work = [
   {
     date: "Sep 2024 — Jun 2025",
     title: "Software Development Engineer",
-    location: "CarTrade Tech · Navi Mumbai",
+    company: "Carwale [CarTrade Tech]",
+    location: "Mumbai, India",
     titleLink: "https://www.carwale.com/",
-    tags: ["React", "Redux", "JavaScript", ".NET", "MySQL"],
+    tags: ["React", "Redux", "JavaScript", ".NET", "MySQL", "CI/CD"],
     body: [
       "Shipped a 68-component Oxygen Design System — improved accessibility and performance for a user base in the millions.",
       "Built React/Redux frontends across multiple product verticals; cut page load times via DOM restructuring, lazy loading, and image-rendering improvements.",
@@ -59,26 +62,28 @@ export const work = [
   {
     date: "2024",
     title: "Full Stack Web Developer Intern",
-    location: "Kutchi Printers & Allied Industries Association — Thane & Remote",
-    tags: [],
+    company: "Kutchi Printers & Allied Industries Association",
+    location: "Mumbai, India",
+    tags: ["NextJS", "MySQL", "CI/CD", "VPS"],
     body: [
       "Built an inquiry routing portal for a printers' association — clients submit inquiries by printing category, automatically distributed to matching members via email. Included member advertisement placements and a scalable admin interface.",
     ],
   },
-  {
-    date: "2023",
-    title: "Full Stack Web Developer Intern",
-    location: "Event Management Startup — Mumbai & Remote",
-    tags: [],
-    body: [
-      "Co-built a real-time collaborative agenda builder for remote event teams — drag-and-drop section management, task assignment, scheduling, and document sharing in a shared hub.",
-    ],
-  },
+  // {
+  //   date: "2023",
+  //   title: "Full Stack Web Developer Intern",
+  //   location: "Event Management Startup — Mumbai & Remote",
+  //   tags: [],
+  //   body: [
+  //     "Co-built a real-time collaborative agenda builder for remote event teams — drag-and-drop section management, task assignment, scheduling, and document sharing in a shared hub.",
+  //   ],
+  // },
   {
     date: "2022 — 2023",
     title: "Full Stack Web Developer Intern",
-    location: "Indian Development Foundation — Mumbai & Remote",
-    tags: [],
+    company: "Indian Development Foundation",
+    location: "Mumbai, India",
+    tags: ["NodeJS", "ReactJS", "MySQL", "VPS"],
     body: [
       "Developed a role-based web portal (teachers, students, administrators) for Balgurukul school management. Replaced manual Google Forms grading with a custom UI that eliminated redundant data entry and significantly reduced teacher workload.",
     ],
@@ -89,7 +94,7 @@ export const projects = [
   {
     date: "2026",
     title: "bro-cli",
-    titleLink: "https://github.com/AdityaSawant0912/bro-cli",
+    titleLink: "https://bro.adityasawant.dev",
     location: "Personal — systems tooling",
     tags: ["Rust", "TOML", "clap", "🚧 In Progress"],
     body: [
@@ -126,31 +131,31 @@ export const projects = [
   {
     date: "2020 — 2023",
     title: "Mini Projects in P5.js",
-    titleLink: "https://adityasawant0912.github.io/P5JS-MiniProjects/",
+    titleLink: "https://p5.adityasawant.dev",
     location: "Personal — creative coding",
     tags: ["JavaScript", "P5.js", "Creative Coding"],
     body: [
       "A collection of visual experiments and game remakes: ray tracing (2D & 3D), fractal-tree animations, Flappy Bird, Game of Life, Minesweeper, Snake. Also A*, 8 Queens, K-means, Epsilon-NFA simulation. Each one a hands-on excuse to understand something deeply.",
     ],
   },
-  {
-    date: "2018 — 2020",
-    title: "Green Light for Emergency Vehicles",
-    location: "NES Ratnam & WMJC",
-    tags: ["Arduino", "Bluetooth"],
-    body: [
-      "Arduino transponder system that talks to traffic signals to grant green-light priority to emergency vehicles. Built in junior college; designed to extend to WiFi-connected signals.",
-    ],
-  },
-  {
-    date: "2018",
-    title: "Salary Management Software",
-    location: "First real project",
-    tags: ["Python"],
-    body: [
-      "First full-fledged software project — a Python app to calculate and manage employee salaries. Built under mentorship to learn data handling, calculations, and basic UI design.",
-    ],
-  },
+  // {
+  //   date: "2018 — 2020",
+  //   title: "Green Light for Emergency Vehicles",
+  //   location: "NES Ratnam & WMJC",
+  //   tags: ["Arduino", "Bluetooth"],
+  //   body: [
+  //     "Arduino transponder system that talks to traffic signals to grant green-light priority to emergency vehicles. Built in junior college; designed to extend to WiFi-connected signals.",
+  //   ],
+  // },
+  // {
+  //   date: "2018",
+  //   title: "Salary Management Software",
+  //   location: "First real project",
+  //   tags: ["Python"],
+  //   body: [
+  //     "First full-fledged software project — a Python app to calculate and manage employee salaries. Built under mentorship to learn data handling, calculations, and basic UI design.",
+  //   ],
+  // },
 ];
 
 export const education = [
@@ -202,5 +207,5 @@ export const contacts = [
   { label: "GitHub", href: "https://github.com/AdityaSawant0912", value: "AdityaSawant0912" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/adityasawant09/", value: "adityasawant09" },
   { label: "X (Twitter)", href: "https://www.x.com/adzzhere/", value: "adzzhere" },
-  { label: "Résumé", href: "https://resume.adityasawant.dev/", value: "resume.adityasawant.dev" },
+  { label: "Résumé", href: "https://resume.adityasawant.dev/pdf", value: "resume.adityasawant.dev/pdf" },
 ];
